@@ -24,6 +24,10 @@ const badgeClass = {
   Free: "badge badge-teal",
 };
 
+function supportsHover() {
+  return typeof window !== "undefined" && window.matchMedia("(hover: hover)").matches;
+}
+
 function useActivePlatform() {
   const { pathname, search } = useLocation();
 
@@ -67,10 +71,40 @@ export default function Navbar() {
         </Link>
 
         <nav className={`nav-links ${menuOpen ? "is-open" : ""}`}>
+          <form className="nav-links-search" onSubmit={handleSearch}>
+            <Icon name="search" size={16} className="nav-search-icon" />
+            <input
+              type="text"
+              placeholder="Search extensions…"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              aria-label="Search extensions"
+            />
+            <button type="submit" className="nav-search-submit" aria-label="Search">
+              <Icon name="search" size={17} />
+            </button>
+          </form>
+
+          <div className="nav-links-currency">
+            <span className="nav-links-currency-label">Currency</span>
+            <div className="nav-links-currency-options">
+              {currencies.map((c) => (
+                <button
+                  key={c}
+                  type="button"
+                  className={`currency-option ${currency === c ? "is-active" : ""}`}
+                  onClick={() => setCurrency(c)}
+                >
+                  {c}
+                </button>
+              ))}
+            </div>
+          </div>
+
           <div
             className="nav-dropdown"
-            onMouseEnter={() => setCatalogOpen(true)}
-            onMouseLeave={() => setCatalogOpen(false)}
+            onMouseEnter={() => supportsHover() && setCatalogOpen(true)}
+            onMouseLeave={() => supportsHover() && setCatalogOpen(false)}
           >
             <Link
               to="/extensions"
@@ -187,13 +221,13 @@ export default function Navbar() {
 
           <div
             className="currency-dropdown"
-            onMouseEnter={() => setCurrencyOpen(true)}
-            onMouseLeave={() => setCurrencyOpen(false)}
+            onMouseEnter={() => supportsHover() && setCurrencyOpen(true)}
+            onMouseLeave={() => supportsHover() && setCurrencyOpen(false)}
           >
             <button
               type="button"
               className="currency-trigger"
-              onClick={() => setCurrencyOpen(true)}
+              onClick={() => setCurrencyOpen((o) => !o)}
               aria-label="Select currency"
               aria-expanded={currencyOpen}
             >
