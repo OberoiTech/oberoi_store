@@ -1,0 +1,35 @@
+.product-highlights {
+  margin: 28px 0 8px;
+}
+
+.product-highlights h3 {
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+}
+
+.product-highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px 32px;
+  max-width: 68ch;
+}
+
+.product-highlights-grid li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 15px;
+  color: var(--ink-soft);
+}
+
+.product-highlights-grid svg {
+  color: var(--success);
+  flex: none;
+  margin-top: 3px;
+}
+
+@media (max-width: 560px) {
+  .product-highlights-grid {
+    grid-template-columns: 1fr;
+  }
+}

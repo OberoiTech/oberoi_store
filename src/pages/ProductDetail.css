@@ -1,0 +1,164 @@
+.product-page {
+  padding: 32px 24px 90px;
+}
+
+.breadcrumb {
+  font-size: 13px;
+  color: var(--ink-faint);
+  margin-bottom: 28px;
+}
+
+.breadcrumb a:hover {
+  color: var(--ink);
+}
+
+.product-hero {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 48px;
+  margin-bottom: 52px;
+}
+
+.product-gallery-tile {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 0;
+  font-size: 64px;
+  box-shadow: var(--shadow);
+}
+
+.product-info h1 {
+  font-size: clamp(1.7rem, 3vw, 2.3rem);
+  margin: 10px 0 8px;
+}
+
+.product-tagline {
+  color: var(--ink-soft);
+  font-size: 16px;
+}
+
+.product-info-meta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 8px 0 20px;
+}
+
+.product-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.product-price {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.product-old-price {
+  font-size: 16px;
+  color: var(--ink-faint);
+  text-decoration: line-through;
+}
+
+.product-buy-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.qty-stepper {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  border: 1px solid var(--line);
+  border-radius: 0;
+  padding: 4px;
+}
+
+.qty-stepper button {
+  width: 32px;
+  height: 32px;
+  border-radius: 0;
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qty-stepper button:hover {
+  background: var(--surface-2);
+}
+
+.qty-stepper span {
+  width: 28px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.product-tabs {
+  border-top: 1px solid var(--line);
+  padding-top: 32px;
+  margin-bottom: 60px;
+}
+
+.tab-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 24px;
+}
+
+.tab-btn {
+  padding: 9px 16px;
+  border-radius: 0;
+  border: none;
+  background: transparent;
+  color: var(--ink-soft);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.tab-btn:hover {
+  background: var(--surface-2);
+}
+
+.tab-btn.is-active {
+  background: var(--ink);
+  color: var(--bg);
+}
+
+.tab-panel p {
+  max-width: 68ch;
+  font-size: 15.5px;
+  color: var(--ink-soft);
+}
+
+.description-closer {
+  margin-top: 20px;
+  padding-top: 32px;
+  border-top: 1px solid var(--line);
+}
+
+.description-closer p {
+  margin-bottom: 16px;
+}
+
+.related-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 22px;
+}
+
+@media (max-width: 800px) {
+  .product-hero {
+    grid-template-columns: 1fr;
+  }
+  .product-gallery-tile {
+    aspect-ratio: 16/9;
+    font-size: 48px;
+  }
+}

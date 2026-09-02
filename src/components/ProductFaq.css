@@ -1,0 +1,42 @@
+.product-faq {
+  max-width: 68ch;
+  border-top: 1px solid var(--line);
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--line);
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 0;
+  font-weight: 600;
+  font-size: 14.5px;
+  background: none;
+  border: none;
+  border-radius: 0;
+  color: var(--ink);
+}
+
+.faq-chevron {
+  flex: none;
+  color: var(--ink-faint);
+  transition: transform 0.15s ease;
+}
+
+.faq-chevron.is-open {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  padding: 0 0 16px;
+  color: var(--ink-soft);
+  font-size: 14.5px;
+  max-width: 60ch;
+  margin: 0;
+}

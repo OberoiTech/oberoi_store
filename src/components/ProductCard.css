@@ -1,0 +1,96 @@
+.product-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+  border-color: transparent;
+}
+
+.product-card-media {
+  position: relative;
+  padding: 20px;
+  background: var(--surface-2);
+}
+
+.product-tile {
+  width: 56px;
+  height: 56px;
+  border-radius: 0;
+  font-size: 18px;
+  margin-top: 24px;
+}
+
+.product-card-ribbon {
+  position: absolute;
+  top: 14px;
+  left: 0;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  background: var(--ink);
+  color: #fff;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0 10px;
+}
+
+.product-card-ribbon::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -11px;
+  width: 11px;
+  height: 100%;
+  background: var(--ink);
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+.product-card-body {
+  padding: 18px 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.platform-chip {
+  align-self: flex-start;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--chip-color);
+  background: color-mix(in srgb, var(--chip-color) 14%, transparent);
+  padding: 3px 9px;
+  border-radius: 0;
+}
+
+.product-card-title {
+  font-size: 17px;
+  margin: 2px 0 0;
+}
+
+.product-card-tagline {
+  font-size: 13.5px;
+  color: var(--ink-soft);
+  margin: 0;
+  flex: 1;
+}
+
+.product-card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 4px 0 6px;
+}
+
+.product-card-price {
+  font-weight: 700;
+  font-size: 15px;
+}

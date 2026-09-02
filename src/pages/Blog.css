@@ -1,0 +1,133 @@
+.rotate-90 {
+  transform: rotate(90deg);
+}
+
+.rotate-neg90 {
+  transform: rotate(-90deg);
+}
+
+.blog-hero {
+  background: var(--surface-2);
+  padding: 48px 24px 40px;
+  text-align: center;
+  border-bottom: 1px solid var(--line);
+}
+
+.blog-hero-inner {
+  max-width: 640px;
+}
+
+.blog-hero h1 {
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+  margin-bottom: 24px;
+}
+
+.blog-search {
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 0;
+  padding: 12px 20px;
+  color: var(--ink-faint);
+  margin: 0 auto;
+  max-width: 480px;
+}
+
+.blog-search input {
+  border: none;
+  padding: 0;
+  background: transparent;
+  flex: 1;
+  font-size: 14.5px;
+}
+
+.blog-search input:focus {
+  outline: none;
+}
+
+.blog-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 32px 0 28px;
+}
+
+.filter-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 16px;
+  border-radius: 0;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink-soft);
+  font-size: 13.5px;
+  font-weight: 600;
+}
+
+.filter-pill:hover {
+  border-color: var(--ink-faint);
+}
+
+.filter-pill.is-active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.filter-pill-count {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  opacity: 0.75;
+}
+
+.blog-section-title {
+  font-size: 1.4rem;
+  margin-bottom: 22px;
+}
+
+.newsletter-inline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 26px 30px;
+  margin-bottom: 28px;
+}
+
+.newsletter-inline h3 {
+  font-size: 17px;
+  margin-bottom: 4px;
+}
+
+.newsletter-inline p {
+  color: var(--ink-soft);
+  font-size: 13.5px;
+  margin: 0;
+}
+
+.blog-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: 12px 0 56px;
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+
+.blog-pagination .icon-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+@media (max-width: 640px) {
+  .newsletter-inline {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+}

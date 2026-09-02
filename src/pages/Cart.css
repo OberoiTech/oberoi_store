@@ -1,0 +1,159 @@
+.cart-page {
+  padding: 40px 24px 90px;
+}
+
+.cart-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.cart-layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 32px;
+  align-items: start;
+}
+
+.cart-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cart-line {
+  display: grid;
+  grid-template-columns: 56px 1fr auto auto auto;
+  align-items: center;
+  gap: 18px;
+  padding: 16px;
+}
+
+.cart-line-tile {
+  width: 56px;
+  height: 56px;
+  font-size: 17px;
+}
+
+.cart-line-info h3 {
+  font-size: 15.5px;
+  margin-bottom: 2px;
+}
+
+.cart-line-info p {
+  font-size: 13px;
+  color: var(--ink-faint);
+  margin: 0;
+}
+
+.cart-line-price {
+  font-weight: 700;
+  min-width: 70px;
+  text-align: right;
+}
+
+.cart-summary {
+  padding: 24px;
+  position: sticky;
+  top: 90px;
+}
+
+.cart-summary h3 {
+  font-size: 16px;
+  margin-bottom: 18px;
+}
+
+.summary-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14.5px;
+  color: var(--ink-soft);
+  margin-bottom: 12px;
+}
+
+.summary-total {
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+  margin-top: 6px;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--ink);
+}
+
+.cart-summary .btn {
+  margin-top: 10px;
+}
+
+.summary-note {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12.5px;
+  color: var(--ink-faint);
+  margin: 14px 0 0;
+}
+
+.summary-note svg {
+  color: var(--teal);
+  flex: none;
+}
+
+.cart-empty {
+  text-align: center;
+  padding: 100px 24px;
+  max-width: 420px;
+}
+
+.empty-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 0;
+  background: var(--surface-2);
+  color: var(--ink-faint);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.cart-empty h1 {
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+}
+
+.cart-empty p {
+  color: var(--ink-soft);
+  margin-bottom: 22px;
+}
+
+@media (max-width: 800px) {
+  .cart-layout {
+    grid-template-columns: 1fr;
+  }
+  .cart-line {
+    grid-template-columns: 44px 1fr;
+    grid-template-areas: "tile info" "qty price" "remove remove";
+    row-gap: 10px;
+  }
+  .cart-line-tile {
+    grid-area: tile;
+    width: 44px;
+    height: 44px;
+  }
+  .cart-line-info {
+    grid-area: info;
+  }
+  .cart-line > .qty-stepper {
+    grid-area: qty;
+  }
+  .cart-line-price {
+    grid-area: price;
+    text-align: right;
+  }
+  .cart-line > .icon-btn {
+    grid-area: remove;
+    justify-self: end;
+  }
+}

@@ -1,0 +1,54 @@
+.partners-why h2 {
+  font-size: 1.4rem;
+  margin: 8px 0 20px;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px 24px;
+}
+
+.why-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.why-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 0;
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+}
+
+.why-item span:last-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.why-item strong {
+  font-size: 14.5px;
+}
+
+.why-item small {
+  font-size: 12.5px;
+  color: var(--ink-faint);
+}
+
+@media (max-width: 800px) {
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 460px) {
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+}

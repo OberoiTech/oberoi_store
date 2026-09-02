@@ -1,0 +1,52 @@
+.platform-strip {
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+}
+
+.platform-strip-inner {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  overflow-x: auto;
+  padding: 10px 24px;
+  scrollbar-width: none;
+}
+
+.platform-strip-inner::-webkit-scrollbar {
+  display: none;
+}
+
+.platform-strip-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  flex: none;
+  padding: 6px 13px;
+  border-radius: 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+
+.platform-strip-item:hover {
+  background: var(--surface-2);
+  color: var(--ink);
+}
+
+.platform-strip-item .dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 0;
+}
+
+.platform-strip-more {
+  color: var(--ink-faint);
+  font-weight: 500;
+  font-style: italic;
+}
+
+.platform-strip-more:hover {
+  background: transparent;
+  color: var(--ink-faint);
+}

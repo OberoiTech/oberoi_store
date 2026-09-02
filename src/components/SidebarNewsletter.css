@@ -1,0 +1,51 @@
+.sidebar-newsletter {
+  border: 1px solid var(--line);
+  padding: 18px;
+  position: relative;
+}
+
+.sidebar-newsletter-badge {
+  position: absolute;
+  top: -11px;
+  right: 14px;
+  background: var(--accent);
+  color: #fff;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  padding: 4px 8px;
+}
+
+.sidebar-newsletter h4 {
+  font-family: "Fraunces", serif;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 4px 0 8px;
+  text-transform: none;
+  letter-spacing: normal;
+  color: var(--ink);
+}
+
+.sidebar-newsletter p {
+  font-size: 12.5px;
+  color: var(--ink-soft);
+  margin-bottom: 14px;
+}
+
+.sidebar-newsletter form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sidebar-newsletter input {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  padding: 9px 11px;
+  font-size: 13.5px;
+}
+
+.sidebar-newsletter .newsletter-success {
+  font-size: 13px;
+}

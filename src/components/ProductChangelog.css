@@ -1,0 +1,26 @@
+.changelog-list {
+  max-width: 68ch;
+  border-top: 1px solid var(--line);
+}
+
+.changelog-entry {
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.changelog-version {
+  flex: none;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--teal);
+  min-width: 4.5ch;
+}
+
+.changelog-entry p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 14.5px;
+}
